@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-mex">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-alura">
+                <img src="images/Logo.png" alt="Logo">
+            </div>
+        </header>
+        <div class="secciones-encripta">
+            <section class="cajas-escribir">
+                <div>
+                    <div>
+                        <textarea class="miTextarea" id="textAreaInput" placeholder="Ingrese el texto aquí"></textarea>
+                    </div>
+                    <div class="info-boton">
+                        <div class="alert">
+                            <img src="./images/bi_exclamation-circle-fill.png" />
+                            <p class="informacion"> Solo letras minúsculas y sin acentos</p>
+                        </div>
+                        <div class="botones">
+                            <button id="encripta" onclick="encryptText();copyOriginalTextOnEncrypt()">Encriptar</button>
+                            <button id="desencripta" onclick="decryptText()">Desencriptar</button>
+                            <button id="limpiar" onclick="limpiarTextoInicial()">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cajas-mensaje">
+                <div class="container">
+                    <div class="caja-muestra-mensajes" id="caja-muestra-mensajes">
+                        <img src="images/Muñeco.png" id="busca" class="busca" alt="Imagen de muestra">
+                        <p class="text1" id="text1">Ningún mensaje fue encontrado</p>
+                        <p class="text2" id="text2">Ingresa el texto que desees encriptar o desencriptar</p>
+                    </div>
+                    <div class="mensajes-a" id="mensajes">
+                        <div class="result" id="result"></div>
+                        <div>
+                            <button class="copiar" id="copiar" onclick="copyToClipboard()">Copiar texto</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
